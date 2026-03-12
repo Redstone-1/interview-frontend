@@ -2,14 +2,17 @@
 
 function countDown(num) {
   if (num <= 0) {
-    console.log("count down end")
+    console.log("倒计时开始数必须大于0")
     return
   }
 
+  console.log(num)
+
   const timer = setInterval(() => {
-    const result = num--
-    console.log(result)
-    if (result <= 0) {
+    num--
+    console.log(num)
+  
+    if (num <= 1) {
       clearInterval(timer)
     }
   }, 1000)
